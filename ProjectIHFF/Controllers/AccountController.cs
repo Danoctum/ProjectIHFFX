@@ -19,9 +19,8 @@ namespace ProjectIHFF.Controllers
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         { //IVO IS GAAY
 
-        {
-            //DIT WILDE IK NIET EENS!
-        }
+           
+        } 
 
         public AccountController(UserManager<ApplicationUser> userManager)
         {
