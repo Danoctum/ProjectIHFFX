@@ -18,6 +18,7 @@ namespace ProjectIHFF.Controllers
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
+            //DIT WILDE IK NIET EENS!
         }
 
         public AccountController(UserManager<ApplicationUser> userManager)
