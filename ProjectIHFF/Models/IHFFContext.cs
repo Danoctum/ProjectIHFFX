@@ -14,7 +14,7 @@ namespace ProjectIHFF.Models
 
         }
 
-        public DbSet<Reservering> Reservings { get; set; }
+        public DbSet<Reservering> Reserverings { get; set; }
         public DbSet<Klant> Klants { get; set; }
         public DbSet<Klant_Reservering> klant_reserverings { get; set; }
         public DbSet<Event> Events { get; set; }
