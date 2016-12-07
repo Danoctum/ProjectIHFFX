@@ -5,9 +5,10 @@ using System.Web;
 
 namespace ProjectIHFF.Models
 {
-    public class presentationViews
+    public class FilmRepository
     {
-        
-        
+        private IHFFContext ctx = new IHFFContext();
+
+        public IEnumerable<>
     }
 }
