@@ -10,9 +10,6 @@ namespace ProjectIHFF.Controllers
     {
         //
         // GET: /Event/
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
 	}
 }
