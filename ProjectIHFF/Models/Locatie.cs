@@ -7,5 +7,7 @@ namespace ProjectIHFF.Models
 {
    public class Locatie
     {
+      
+
     }
 }
