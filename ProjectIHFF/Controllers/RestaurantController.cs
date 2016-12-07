@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace ProjectIHFF.Controllers
 {
-    public class EventController : Controller
+    public class RestaurantController : Controller
     {
         //
-        // GET: /Event/
+        // GET: /Restaurant/
         public ActionResult Index()
         {
             return View();
