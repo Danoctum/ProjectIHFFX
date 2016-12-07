@@ -28,7 +28,7 @@ public    class Restaurant : Event
             this.beschrijving = beschrijving;
             this.afbeelding_url = afbeelding_url;
             this.locatie_url = locatie_url;
-            this.cijfer = cijfer
+            this.cijfer = cijfer;
         }
 
         public Restaurant( int id_naam, string beschrijving, string afbeelding_url, string locatie_url, float cijfer, float prijs, string naam, DateTime beginDatum, DateTime eindDatum, Locatie locatie)
@@ -39,7 +39,7 @@ public    class Restaurant : Event
             this.beschrijving = beschrijving;
             this.afbeelding_url = afbeelding_url;
             this.locatie_url = locatie_url;
-            this.cijfer = cijfer
+            this.cijfer = cijfer;
         }
     }
 }
