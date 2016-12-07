@@ -12,13 +12,14 @@ namespace ProjectIHFF.Models
         public string PosterURL { get; set; }
         public float Rating { get; set; }
 
-        public Film():base()
+        public Film()
+            : base()
         {
 
         }
 
         public Film(int id, string beschrijving, string trailer, string poster, float rating, float prijs, string naam, DateTime beginDatum, DateTime eindDatum, Locatie locatie)
-            : base(id,prijs, naam, beginDatum, eindDatum, locatie)
+            : base(id, prijs, naam, beginDatum, eindDatum, locatie)
         {
             this.Beschrijving = beschrijving;
             this.TrailerURL = trailer;

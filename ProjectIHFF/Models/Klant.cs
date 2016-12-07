@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-  public  class Klant
+    public class Klant
     {
         int id;
 
@@ -25,12 +25,12 @@ namespace ProjectIHFF.Models
             this.emailadres = emailadres;
             this.voornaam = voornaam;
             this.achternaam = achternaam;
-            this.telefoonnummer = telefoonnummer; 
+            this.telefoonnummer = telefoonnummer;
         }
 
         public Klant(string emailadres, string voornaam, string achternaam, string telefoonnummer)
         {
-         
+
             this.emailadres = emailadres;
             this.voornaam = voornaam;
             this.achternaam = achternaam;
