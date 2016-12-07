@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class Film : Event
+    public class Film : Event
     {
         public string Beschrijving { get; set; }
         public string TrailerURL { get; set; }

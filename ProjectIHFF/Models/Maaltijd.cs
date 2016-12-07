@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class Maaltijd
+    public class Maaltijd
     {
     }
 }

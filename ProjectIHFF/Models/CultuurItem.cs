@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class CultuurItem
+ public   class CultuurItem
     {
     }
 }

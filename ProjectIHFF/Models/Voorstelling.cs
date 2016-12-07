@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class Voorstelling
+    public class Voorstelling
     {
     }
 }

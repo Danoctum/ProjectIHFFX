@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class Special : Event
+public    class Special : Event
     {
         public string Beschrijving { get; set; }
-        public string Naam { get; set; }
+       
         public string Spreker { get; set; }
 
 
@@ -22,7 +22,7 @@ namespace ProjectIHFF.Models
             :base(prijs,naam,beginDatum,eindDatum,locatie)
         {
             this.Beschrijving = beschrijving;
-            this.Naam = naam;
+           
             this.Spreker = spreker;
         }
 
@@ -30,7 +30,7 @@ namespace ProjectIHFF.Models
             : base(id,prijs, naam, beginDatum, eindDatum, locatie)
         {
             this.Beschrijving = beschrijving;
-            this.Naam = naam;
+        
             this.Spreker = spreker;
         }
     }

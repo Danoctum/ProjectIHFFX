@@ -7,7 +7,7 @@ namespace ProjectIHFF.Models
 {
 public    class Restaurant : Event
     {
-        public int id; 
+       
         public int id_naam { get; set; }
 
         public string beschrijving { get; set; }

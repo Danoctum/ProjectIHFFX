@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class Reservering
+    public class Reservering
     {
     }
 }
