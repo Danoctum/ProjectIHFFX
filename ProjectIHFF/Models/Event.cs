@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    class Event
+  public  class Event
     {
         public int id;
         public float prijs;
