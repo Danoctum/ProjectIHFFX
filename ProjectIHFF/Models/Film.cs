@@ -12,7 +12,7 @@ namespace ProjectIHFF.Models
         public string PosterURL { get; set; }
         public float Rating { get; set; }
 
-        public Film()
+        public Film():base()
         {
 
         }
