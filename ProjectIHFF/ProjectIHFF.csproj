@@ -164,7 +164,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CultuurItem.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Film.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IHFFContext.cs" />
+    <Compile Include="Models\Klant.cs" />
+    <Compile Include="Models\Klant_Reservering.cs" />
+    <Compile Include="Models\Locatie.cs" />
+    <Compile Include="Models\Maaltijd.cs" />
+    <Compile Include="Models\Reservering.cs" />
+    <Compile Include="Models\Restaurant.cs" />
+    <Compile Include="Models\Special.cs" />
+    <Compile Include="Models\Voorstelling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
