@@ -1,0 +1,15 @@
+﻿@using ProjectIHFF.Models;
+@model IEnumerable<Voorstelling>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<section>
+    @foreach (Voorstelling film in Model)
+    {
+        <section>
+            @film.naam
+        </section>
+    }
+</section>

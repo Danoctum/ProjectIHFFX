@@ -232,12 +232,12 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Film\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Betaal\" />
     <Folder Include="Views\Event\" />
-    <Folder Include="Views\Film\" />
     <Folder Include="Views\Restaurant\" />
     <Folder Include="Views\Special\" />
   </ItemGroup>

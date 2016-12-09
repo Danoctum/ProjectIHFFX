@@ -1,39 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 
 namespace ProjectIHFF.Models
 {
-    public class Voorstelling
+    [Table("Voorstelling")]
+    public class Voorstelling : Event
     {
         //fields
-        public int id;
-        public int eventId;
-        public Boolean isHighlight;
+        [Key]
+        public int id { get; set; }
+
+
+        public int event_id { get; set; }
+
+        [ForeignKey("EventId")]
+        public virtual Event Event { get; set; }
+
+      
+        public int film_id { get; set; }
+
+        [ForeignKey("film_id")]
+        public virtual Film Film { get; set; }
+
+        public Boolean is_highlight { get; set; }
 
         //properties
-        public Boolean IsHighlight { get { return isHighlight; } set { isHighlight = value; } }
-        public Film Film { get; set; }
+      
+ 
 
         public Voorstelling()
         {
 
         }
 
-        public Voorstelling(int id, int eventId, Boolean isHighlight, Film film)
+        public Voorstelling(int id, Event gebeurtenis,Film film, Boolean isHighlight)
         {
             this.id = id;
-            this.eventId = eventId;
-            this.IsHighlight = isHighlight;
+            this.Event = gebeurtenis;
+            this.Film = film;
+            this.is_highlight = isHighlight;
             this.Film = film;
         }
 
 
-        public Voorstelling(int eventId, Boolean isHighlight, Film film)
+        public Voorstelling(Event gebeurtenis, Film film, Boolean isHighlight)
         {
-            this.eventId = eventId;
-            this.IsHighlight = isHighlight;
+            this.Event = gebeurtenis;
+            this.Film = film;
+            this.is_highlight = isHighlight;
             this.Film = film;
         }
 
