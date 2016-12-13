@@ -21,19 +21,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("View the events", "Index", "Event")</li> 
+                    <li class="dropdown-menu">@Html.ActionLink("Event", "Index", "Events")</li>
+                    <ul>
+                        <li> @Html.ActionLink("Film", "Index", "Film")</li>
+                        <li> @Html.ActionLink("Restaurant", "Index", "Food")</li>
+                        <li> @Html.ActionLink("Special", "Index", "Specials")</li>
+                    </ul>
                     <li>@Html.ActionLink("Experience the highlights", "Index", "Highlight")</li>
                     <li>@Html.ActionLink("Contact", "Index", "Programma")</li>
                     <li>@Html.ActionLink("Discover Haarlem","Index","Monument")</li>
                   @* <li>@Html.ActionLink("", "Index", "Winkelwagen", null, new { @style = "background:url('../../Images/Menu/edit.png') no-repeat center right; display:block; height: 30px; width: 50px" })</li> *@
                     <li>@Html.ActionLink("NL", "IndexNL", "Home")</li>
                     <li>@Html.ActionLink("EN", "Index", "Home")</li>
-                    <li class="dropdown-menu" >@Html.ActionLink("Event", "Index", "Events")</li>
-                    <ul> 
-                        <li> @Html.ActionLink("Film", "Index", "Film")</li>
-                        <li> @Html.ActionLink("Restaurant", "Index", "Food")</li>
-                        <li> @Html.ActionLink("Special", "Index", "Specials")</li> 
-                    </ul>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
