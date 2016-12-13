@@ -3,11 +3,41 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ProjectIHFF.Models
 {
     public class IHFFContext : DbContext
     {
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+          /*  modelBuilder.Entity<Voorstelling>()
+               .HasRequired<Event>(v => v.Event)
+               .WithOptional(e => e.VoorstellingItem)
+               .WillCascadeOnDelete(); */
+
+           modelBuilder.Entity<Voorstelling>()
+                .HasRequired<Film>(v => v.Film)
+                .WithMany(f => f.Voorstellingen)
+                .HasForeignKey(v => v.film_id); 
+
+            modelBuilder.Entity<Voorstelling>()
+               .HasRequired<Event>(v => v.Event)
+               .WithMany()
+               .HasForeignKey(v => v.event_id);
+               
+
+          /*  modelBuilder.Entity<Voorstelling>()
+                .HasOptional<Film>(v => v.Film)
+                .WithMany()
+                .HasForeignKey(v => v.FilmId); */
+
+
+                
+
+        }
+
         public IHFFContext()
             : base("IHFFConnection")
         {
@@ -25,7 +55,7 @@ namespace ProjectIHFF.Models
         public DbSet<Voorstelling> Voorstellings { get; set; }
         public DbSet<Film> Films { get; set; }
         public DbSet<CultuurItem> CultuurItems { get; set; }
- 
+
 
     }
 }

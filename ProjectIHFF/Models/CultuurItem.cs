@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectIHFF.Models
 {
     public class CultuurItem
     {
-        public int id;
+        [Key]
+        public int Id { get; set; }
+
         public string naam { get; set; }
         public Locatie locatie { get; set; }
         public DateTime openingsstarttijd { get; set; }
@@ -20,7 +23,7 @@ namespace ProjectIHFF.Models
 
         public CultuurItem(int id, string naam, Locatie locatie, DateTime openingsstarttijd, DateTime openingseindtijd)
         {
-            this.id = id;
+            this.Id = id;
             this.naam = naam;
             this.locatie = locatie;
             this.openingsstarttijd = openingsstarttijd;

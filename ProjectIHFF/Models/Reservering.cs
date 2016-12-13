@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -7,7 +8,9 @@ namespace ProjectIHFF.Models
 {
     public class Reservering
     {
-       public int id;
+        [Key]
+        public int Id { get; set; }
+
        public int klantid;
         public bool is_betaald { get; set;}
         public bool is_geannuleerd { get; set; }
@@ -21,7 +24,7 @@ namespace ProjectIHFF.Models
 
         public Reservering(int id, int klantid, bool is_betaald, bool is_geannuleerd, DateTime besteldatum, string ophaalcode)
         {
-            this.id = id;
+            this.Id = id;
             this.klantid = klantid;
             this.is_betaald = is_betaald;
             this.is_geannuleerd = is_geannuleerd;

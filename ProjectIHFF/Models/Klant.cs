@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -7,7 +8,8 @@ namespace ProjectIHFF.Models
 {
     public class Klant
     {
-        int id;
+        [Key]
+        public int Id { get; set; }
 
         string emailadres;
         string voornaam;
@@ -21,7 +23,7 @@ namespace ProjectIHFF.Models
 
         public Klant(int id, string emailadres, string voornaam, string achternaam, string telefoonnummer)
         {
-            this.id = id;
+            this.Id = id;
             this.emailadres = emailadres;
             this.voornaam = voornaam;
             this.achternaam = achternaam;

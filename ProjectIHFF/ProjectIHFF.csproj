@@ -240,7 +240,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Betaal\" />
     <Folder Include="Views\Event\" />
-    <Folder Include="Views\Film\" />
     <Folder Include="Views\Restaurant\" />
     <Folder Include="Views\Special\" />
   </ItemGroup>

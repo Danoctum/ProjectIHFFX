@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -7,15 +8,15 @@ namespace ProjectIHFF.Models
 {
     public class Locatie
     {
-
-        private int id;
+        [Key]
+        public int Id { get; set; }
         //properties
         public int Capaciteit { get; set; }
         public string Naam { get; set; }
         public string Zaal { get; set; }
         public string Straat { get; set; }
         public int HuisNummer { get; set; }
-        public char Toevoeging { get; set; }
+        public string Toevoeging { get; set; }
         public string Postcode { get; set; }
         public string Plaats { get; set; }
 
@@ -24,9 +25,9 @@ namespace ProjectIHFF.Models
 
         }
 
-        public Locatie(int id, int capaciteit, string naam, string zaal, string straat, int nummer, char toevoeging, string postcode, string plaats)
+        public Locatie(int id, int capaciteit, string naam, string zaal, string straat, int nummer, string toevoeging, string postcode, string plaats)
         {
-            this.id = id;
+            this.Id = id;
             this.Capaciteit = capaciteit;
             this.Naam = naam;
             this.Zaal = zaal;
@@ -37,7 +38,7 @@ namespace ProjectIHFF.Models
             this.Plaats = plaats;
         }
 
-        public Locatie(int capaciteit, string naam, string zaal, string straat, int nummer, char toevoeging, string postcode, string plaats)
+        public Locatie(int capaciteit, string naam, string zaal, string straat, int nummer,string toevoeging, string postcode, string plaats)
         {
             this.Capaciteit = capaciteit;
             this.Naam = naam;

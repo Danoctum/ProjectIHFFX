@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -7,7 +8,8 @@ namespace ProjectIHFF.Models
 {
 public    class Restaurant : Event
     {
-       
+
+       [Key]
         public int id_naam { get; set; }
 
         public string beschrijving { get; set; }
