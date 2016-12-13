@@ -11,12 +11,11 @@ namespace ProjectIHFF.Models
     public class Voorstelling : Event
     {
         //fields
-        [Key]
-        public int id { get; set; }
 
 
         public int event_id { get; set; }
 
+        [Key]
         [ForeignKey("EventId")]
         public virtual Event Event { get; set; }
 

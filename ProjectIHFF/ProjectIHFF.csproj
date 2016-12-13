@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -179,6 +180,7 @@
     <Compile Include="Models\Locatie.cs" />
     <Compile Include="Models\Maaltijd.cs" />
     <Compile Include="Models\presentationViews.cs" />
+    <Compile Include="Models\Repositories\MaaltijdRepository.cs" />
     <Compile Include="Models\Reservering.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\Special.cs" />
@@ -189,6 +191,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Logo.PNG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -232,13 +235,13 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Film\Index.cshtml" />
+    <Content Include="Views\Shared\NF.cshtml" />
+    <Content Include="Views\Restaurant\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Betaal\" />
     <Folder Include="Views\Event\" />
-    <Folder Include="Views\Restaurant\" />
     <Folder Include="Views\Special\" />
   </ItemGroup>
   <ItemGroup>

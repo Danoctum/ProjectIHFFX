@@ -1,0 +1,46 @@
+﻿<!Doctype HTML>
+@Styles.Render("~/Content/css")
+<html>
+<head>
+
+    <style>
+        body {
+            background-color: #CCC;
+        }
+
+        footer {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="nav">
+
+       <li><a href="<Url.Action(" Index","Home")"><img src="~/Content/images/logo.png" /></a>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Film", "Index", "Film")</li>
+                    <li>@Html.ActionLink("Restaurant", "Index", "Food")</li>
+                    <li>@Html.ActionLink("Special", "Index", "Specials")</li>
+                </ul>
+            <li> @Html.ActionLink("Hightlight","Index", "Our Highlights") </li>
+            <li> @Html.ActionLink("Cultuur", "Index", "Haarlem")</li>
+            <li> <img src="Content/Images/Cart.png"> </li>
+
+        </ul>
+
+
+    @RenderBody()
+
+    <footer class="footer">
+
+    <h3 class="footer"> Contact </h3> <p class="footer">Celluloid & Silver</p> <p class="footer"> Zijlweg 7</p>  <p class="footer"> 1234 AA Haarlem </p>
+    <h3 class="footer"> FAQ </h3>
+    <h3 class="footer"> Sitemap </h3>
+
+    </footer>
+</body>
+
+</html>

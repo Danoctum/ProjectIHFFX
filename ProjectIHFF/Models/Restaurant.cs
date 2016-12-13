@@ -17,6 +17,8 @@ public    class Restaurant : Event
         public string locatie_url { get; set; }
         public float cijfer { get; set; }
 
+        public virtual ICollection<Maaltijd> Maaltijden { get; set; }
+
         public Restaurant(): base()
         {
 

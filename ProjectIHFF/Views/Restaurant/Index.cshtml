@@ -1,0 +1,16 @@
+﻿@using ProjectIHFF.Models
+
+@Model IEnumerable<Restaurant>
+
+
+    <ul>
+        
+        <li>
+            @foreach (Restaurant r in Model)
+            {
+                @r.naam
+            }
+        </li> 
+    </ul>
+
+

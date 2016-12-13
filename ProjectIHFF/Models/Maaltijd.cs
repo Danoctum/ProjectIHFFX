@@ -3,17 +3,29 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectIHFF.Models
 {
-    public class Maaltijd
+    [Table("Maaltijd")]
+    public class Maaltijd : Event
     {
-        [Key]
-        public int Id { get; set; }
+       
+       
 
-        private string maaltijdCategorie;
-        private Restaurant restaurant;
-        private Event gebeurtenis;
+        private string maaltijd_categorie { get; set; } 
+            
+
+        public int event_id { get; set; }
+
+        public int restaurant_id { get; set; }
+
+        [ForeignKey("restaurant_id")]
+        public virtual Restaurant restaurant { get; set; }
+
+        [Key]
+        [ForeignKey("event_id")]
+        public virtual Event gebeurtenis { get; set; }
 
         public Maaltijd()
         {
@@ -22,15 +34,15 @@ namespace ProjectIHFF.Models
 
         public Maaltijd(int id, string categorie, Restaurant restaurant, Event gebeuren)
         {
-            this.Id = id;
-            this.maaltijdCategorie = categorie;
+            this.id = id;
+            this.maaltijd_categorie = categorie;
             this.restaurant = restaurant;
             this.gebeurtenis = gebeuren;
         }
 
         public Maaltijd(string categorie, Restaurant restaurant, Event gebeuren)
         {
-            this.maaltijdCategorie = categorie;
+            this.maaltijd_categorie = categorie;
             this.restaurant = restaurant;
             this.gebeurtenis = gebeuren;
         }

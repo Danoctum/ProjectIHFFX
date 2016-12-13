@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectIHFF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,13 @@ namespace ProjectIHFF.Controllers
 {
     public class RestaurantController : Controller
     {
+        private PresentationViews presentation = new PresentationViews();
         //
         // GET: /Restaurant/
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<Restaurant> restaurants = presentation.GetAllRestaurants(); 
+            return View(restaurants);
         }
 	}
 }
