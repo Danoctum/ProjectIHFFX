@@ -26,15 +26,21 @@ namespace ProjectIHFF.Models
                .HasRequired<Event>(v => v.Event)
                .WithMany()
                .HasForeignKey(v => v.event_id);
-               
 
-          /*  modelBuilder.Entity<Voorstelling>()
-                .HasOptional<Film>(v => v.Film)
+
+            /*  modelBuilder.Entity<Voorstelling>()
+                  .HasOptional<Film>(v => v.Film)
+                  .WithMany()
+                  .HasForeignKey(v => v.FilmId); */
+            modelBuilder.Entity<Maaltijd>()
+               .HasRequired<Restaurant>(m => m.restaurant)
+               .WithMany(r => r.Maaltijden)
+               .HasForeignKey(m => m.restaurant_id);
+
+            modelBuilder.Entity<Maaltijd>()
+                .HasRequired<Event>(m => m.gebeurtenis)
                 .WithMany()
-                .HasForeignKey(v => v.FilmId); */
-
-
-                
+                .HasForeignKey(m => m.event_id);
 
         }
 
