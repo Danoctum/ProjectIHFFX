@@ -180,6 +180,7 @@
     <Compile Include="Models\Locatie.cs" />
     <Compile Include="Models\Maaltijd.cs" />
     <Compile Include="Models\presentationViews.cs" />
+    <Compile Include="Models\Repositories\MaaltijdRepository.cs" />
     <Compile Include="Models\Reservering.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\Special.cs" />
@@ -235,12 +236,12 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\NF.cshtml" />
+    <Content Include="Views\Restaurant\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Betaal\" />
     <Folder Include="Views\Event\" />
-    <Folder Include="Views\Restaurant\" />
     <Folder Include="Views\Special\" />
   </ItemGroup>
   <ItemGroup>

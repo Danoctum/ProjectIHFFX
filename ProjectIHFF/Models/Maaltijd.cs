@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjectIHFF.Models
 {
@@ -12,7 +13,11 @@ namespace ProjectIHFF.Models
         public int Id { get; set; }
 
         private string maaltijdCategorie;
-        private Restaurant restaurant;
+
+        [ForeignKey("restaurant_id")]
+        public Restaurant restaurant;
+
+        [ForeignKey("EventId")]
         private Event gebeurtenis;
 
         public Maaltijd()
